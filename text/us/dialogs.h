@@ -2100,3 +2100,8 @@ Arrgghh!\n\
 Anyone entering this cave\n\
 without permission will\n\
 meet certain disaster."))
+
+DEFINE_DIALOG(DIALOG_170, 1, 3, 40, 200, _("\
+Keep off the grass!\n\
+\n\
+          -Management"))
