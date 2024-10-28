@@ -23,7 +23,7 @@ void bhv_checkerboard_elevator_group_init(void) {
     }
 
     sp3C = o->oBhvParams2ndByte * 10;
-    sp34 = (o->oBhvParams >> 24) & 0xFF;
+    sp34 = *((u8 *) &o->oBhvParams);
 
     for (i = 0; i <= 1; i++) {
         if (i == 0) {

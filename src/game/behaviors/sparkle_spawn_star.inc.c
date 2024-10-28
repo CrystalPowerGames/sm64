@@ -19,7 +19,7 @@ void bhv_spawned_star_init(void) {
         o->oBhvParams = o->parentObj->oBhvParams;
     }
 
-    starIndex = (o->oBhvParams >> 24) & 0xFF;
+    starIndex = *((u8 *) &o->oBhvParams);
 
     if (bit_shift_left(starIndex)
         & save_file_get_star_flags(gCurrSaveFileNum - 1, COURSE_NUM_TO_INDEX(gCurrCourseNum))) {

@@ -2,7 +2,7 @@
 
 void bhv_warp_loop(void) {
     if (o->oTimer == 0) {
-        u16 bhvParams1stByte = (o->oBhvParams >> 24) & 0xFF;
+        u16 bhvParams1stByte = *((u8 *) &o->oBhvParams);
 
         if (bhvParams1stByte == 0x00) {
             o->hitboxRadius = 50.0f;
@@ -20,7 +20,7 @@ void bhv_warp_loop(void) {
 // identical to the above function except for o->hitboxRadius
 void bhv_fading_warp_loop() {
     if (o->oTimer == 0) {
-        u16 bhvParams1stByte = (o->oBhvParams >> 24) & 0xFF;
+        u16 bhvParams1stByte = *((u8 *) &o->oBhvParams);
 
         if (bhvParams1stByte == 0x00) {
             o->hitboxRadius = 85.0f;
